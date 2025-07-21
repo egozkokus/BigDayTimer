@@ -1,0 +1,25 @@
+name = "bigdaytimer-backend"
+main = "src/worker.js"
+compatibility_date = "2024-01-01"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+
+# KV namespaces
+[[kv_namespaces]]
+binding = "PREMIUM_USERS"
+id = "YOUR_KV_NAMESPACE_ID"
+preview_id = "YOUR_PREVIEW_KV_NAMESPACE_ID"
+
+# For production environment
+[env.production]
+[env.production.vars]
+ENVIRONMENT = "production"
+PADDLE_VENDOR_ID = "YOUR_PADDLE_VENDOR_ID"
+PADDLE_API_KEY = "YOUR_PADDLE_API_KEY"
+PADDLE_WEBHOOK_SECRET = "YOUR_PADDLE_WEBHOOK_SECRET"
+
+[[env.production.kv_namespaces]]
+binding = "PREMIUM_USERS"
+id = "YOUR_PRODUCTION_KV_NAMESPACE_ID"

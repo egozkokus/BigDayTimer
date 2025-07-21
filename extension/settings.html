@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הגדרות מתקדמות - BigDayTimer</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="settings-container">
+    <header class="settings-header">
+      <h1>⚙️ הגדרות מתקדמות</h1>
+      <button class="back-button" onclick="window.close()">חזור</button>
+    </header>
+    
+    <div class="settings-content">
+      <!-- תמונות רקע מותאמות אישית -->
+      <section class="settings-section">
+        <h2>🎨 תמונות רקע מותאמות אישית</h2>
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="bgUpload" accept="image/*" hidden>
+          <p>גרור תמונה לכאן או לחץ להעלאה</p>
+          <button class="upload-btn">בחר תמונה</button>
+        </div>
+        <div class="uploaded-images" id="uploadedImages"></div>
+      </section>
+      
+      <!-- אנימציות -->
+      <section class="settings-section">
+        <h2>✨ אנימציות ואפקטים</h2>
+        <label class="toggle-setting">
+          <input type="checkbox" id="enableAnimations">
+          <span>הפעל אנימציות</span>
+        </label>
+        <label class="toggle-setting">
+          <input type="checkbox" id="enableParticles">
+          <span>אפקט חלקיקים</span>
+        </label>
+      </section>
+      
+      <!-- צלילים -->
+      <section class="settings-section">
+        <h2>🔊 התראות וצלילים</h2>
+        <label class="toggle-setting">
+          <input type="checkbox" id="enableNotifications">
+          <span>התראות שולחן עבודה</span>
+        </label>
+        <label class="toggle-setting">
+          <input type="checkbox" id="enableSounds">
+          <span>צלילי התראה</span>
+        </label>
+      </section>
+    </div>
+  </div>
+  
+  <script src="settings.js"></script>
+</body>
+</html>

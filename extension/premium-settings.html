@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הגדרות פרימיום - BigDayTimer</title>
+  <link rel="stylesheet" href="premium-settings.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>⭐ הגדרות פרימיום</h1>
+      <button class="back-button" id="backButton">חזור</button>
+    </header>
+    
+    <main class="content">
+      <section class="section">
+        <h2>🎨 רקעים מותאמים אישית</h2>
+        <p>העלה תמונות משלך כדי ליצור טיימרים ייחודיים. התמונות נשמרות מקומית על הדפדפן שלך.</p>
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="bgUpload" accept="image/*" hidden>
+          <p>גרור תמונה לכאן או לחץ להעלאה</p>
+          <button class="upload-btn">בחר תמונה</button>
+        </div>
+        <div class="uploaded-images" id="uploadedImages">
+          </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="premium-settings.js"></script>
+</body>
+</html>

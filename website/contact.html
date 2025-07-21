@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BigDayTimer</title>
+    <meta name="description" content="Get in touch with the BigDayTimer team - support, feedback, questions, and suggestions welcome.">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="nav-brand">
+                        <a href="/" class="brand-link">
+                            <span class="brand-icon">⏳</span>
+                            <span class="brand-text">BigDayTimer</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <a href="/#features" class="nav-link">Features</a>
+                        <a href="/#pricing" class="nav-link">Pricing</a>
+                        <a href="user-guide.html" class="nav-link">Guide</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                        <a href="download.html" class="nav-link nav-cta">Download</a>
+                    </div>
+                    
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle">We'd love to hear from you! Get support, share feedback, or just say hi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section class="contact-methods">
+        <div class="container">
+            <h2 class="section-title">💬 Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>General Support</h3>
+                    <p>Questions about using BigDayTimer, technical issues, or general inquiries</p>
+                    <a href="mailto:support@bigdaytimer.com" class="contact-link">support@bigdaytimer.com</a>
+                    <div class="response-time">Response time: 24-48 hours</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🔒</div>
+                    <h3>Privacy & Legal</h3>
+                    <p>Data privacy questions, legal matters, or terms of service clarifications</p>
+                    <a href="mailto:privacy@bigdaytimer.com" class="contact-link">privacy@bigdaytimer.com</a>
+                    <div class="response-time">Response time: 2-5 business days</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💳</div>
+                    <h3>Billing & Payments</h3>
+                    <p>Premium subscription issues, refund requests, or payment problems</p>
+                    <a href="mailto:billing@bigdaytimer.com" class="contact-link">billing@bigdaytimer.com</a>
+                    <div class="response-time">Response time: 24 hours</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🐛</div>
+                    <h3>Bug Reports</h3>
+                    <p>Found a bug? Technical issues or unexpected behavior in the extension</p>
+                    <a href="mailto:bugs@bigdaytimer.com" class="contact-link">bugs@bigdaytimer.com</a>
+                    <div class="response-time">Response time: 12-24 hours</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💡</div>
+                    <h3>Feature Requests</h3>
+                    <p>Got an idea for a new feature? We love hearing your suggestions!</p>
+                    <a href="mailto:features@bigdaytimer.com" class="contact-link">features@bigdaytimer.com</a>
+                    <div class="response-time">Response time: 3-7 days</div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🤝</div>
+                    <h3>Business Inquiries</h3>
+                    <p>Partnership opportunities, media inquiries, or business collaboration</p>
+                    <a href="mailto:business@bigdaytimer.com" class="contact-link">business@bigdaytimer.com</a>
+                    <div class="response-time">Response time: 3-5 business days</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <div class="form-content">
+                    <h2>📝 Send Us a Message</h2>
+                    <p>Prefer to use a form? Fill out the details below and we'll get back to you as soon as possible.</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category">
+                                <option value="general">General Support</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="privacy">Privacy/Legal</option>
+                                <option value="business">Business Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Brief description of your inquiry">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please provide as much detail as possible..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userAgent">System Information (Optional)</label>
+                            <input type="text" id="userAgent" name="userAgent" readonly placeholder="This helps us troubleshoot technical issues">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message 📤</span>
+                        </button>
+                        
+                        <div class="form-note">
+                            <p>* Required fields</p>
+                            <p>We typically respond within 24-48 hours during business days.</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="form-sidebar">
+                    <div class="contact-info-card">
+                        <h3>📍 Contact Information</h3>
+                        <div class="info-item">
+                            <strong>Email:</strong> support@bigdaytimer.com
+                        </div>
+                        <div class="info-item">
+                            <strong>Business Hours:</strong> Mon-Fri, 9AM-5PM EST
+                        </div>
+                        <div class="info-item">
+                            <strong>Emergency Support:</strong> Premium users only
+                        </div>
+                    </div>
+                    
+                    <div class="faq-quick">
+                        <h3>🔍 Quick Answers</h3>
+                        <div class="quick-faq">
+                            <h4>Installation Issues?</h4>
+                            <p>Check our <a href="user-guide.html#installation">installation guide</a> first.</p>
+                        </div>
+                        <div class="quick-faq">
+                            <h4>Premium Not Working?</h4>
+                            <p>Wait 5-10 minutes after purchase, then refresh your browser.</p>
+                        </div>
+                        <div class="quick-faq">
+                            <h4>Timer Not Showing?</h4>
+                            <p>Ensure the extension is enabled and the date is in the future.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-connect">
+                        <h3>🌐 Connect With Us</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">📷 Instagram</a>
+                            <a href="#" class="social-link">💼 LinkedIn</a>
+                        </div>
+                        <p>Follow us for updates, tips, and countdown inspiration!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Resources Section -->
+    <section class="support-resources">
+        <div class="container">
+            <h2 class="section-title">📚 Self-Help Resources</h2>
+            <p class="section-subtitle">Looking for quick answers? Check out these helpful resources first:</p>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📖</div>
+                    <h3>User Guide</h3>
+                    <p>Complete guide to installation, setup, and customization</p>
+                    <a href="user-guide.html" class="btn btn-outline">View Guide</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">❓</div>
+                    <h3>FAQ Section</h3>
+                    <p>Answers to the most commonly asked questions</p>
+                    <a href="/#faq" class="btn btn-outline">View FAQ</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">🔧</div>
+                    <h3>Troubleshooting</h3>
+                    <p>Step-by-step solutions to common technical issues</p>
+                    <a href="user-guide.html#troubleshooting" class="btn btn-outline">Get Help</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">🔒</div>
+                    <h3>Privacy Policy</h3>
+                    <p>Learn how we protect your data and respect your privacy</p>
+                    <a href="privacy.html" class="btn btn-outline">Read Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Response Expectations -->
+    <section class="response-expectations">
+        <div class="container">
+            <h2>⏰ What to Expect</h2>
+            <div class="expectations-grid">
+                <div class="expectation-item">
+                    <div class="expectation-icon">📧</div>
+                    <h3>Quick Acknowledgment</h3>
+                    <p>You'll receive an automated confirmation email immediately after submitting your message.</p>
+                </div>
+                
+                <div class="expectation-item">
+                    <div class="expectation-icon">👥</div>
+                    <h3>Personal Response</h3>
+                    <p>A real person from our team will review your message and provide a thoughtful response.</p>
+                </div>
+                
+                <div class="expectation-item">
+                    <div class="expectation-icon">🚀</div>
+                    <h3>Follow-up Support</h3>
+                    <p>We'll stay with you until your issue is resolved or question is fully answered.</p>
+                </div>
+                
+                <div class="expectation-item">
+                    <div class="expectation-icon">💝</div>
+                    <h3>Premium Priority</h3>
+                    <p>Premium users receive prioritized support with faster response times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>BigDayTimer</h3>
+                    <p>Turn every browser opening into an exciting reminder of your next big thing</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h5>Product</h5>
+                        <a href="/#features">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="download.html">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h5>Support</h5>
+                        <a href="/#faq">FAQ</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="user-guide.html">User Guide</a>
+                    </div>
+                    <div class="footer-column">
+                        <h5>Company</h5>
+                        <a href="about.html">About</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BigDayTimer. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-fill system information
+            const userAgentField = document.getElementById('userAgent');
+            if (userAgentField) {
+                userAgentField.value = `${navigator.userAgent} | Screen: ${screen.width}x${screen.height} | Chrome: ${navigator.userAgent.includes('Chrome')}`;
+            }
+            
+            // Handle form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Collect form data
+                    const formData = new FormData(contactForm);
+                    const data = Object.fromEntries(formData);
+                    
+                    // Here you would typically send to your backend
+                    console.log('Contact form data:', data);
+                    
+                    // Show success message
+                    alert('Thank you for your message! We\\'ll get back to you within 24-48 hours. 📧');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Refresh user agent info
+                    if (userAgentField) {
+                        userAgentField.value = `${navigator.userAgent} | Screen: ${screen.width}x${screen.height} | Chrome: ${navigator.userAgent.includes('Chrome')}`;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

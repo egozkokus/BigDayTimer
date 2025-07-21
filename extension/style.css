@@ -1,0 +1,240 @@
+/* =================================
+   Global Styles & Variables
+   ================================= */
+   :root {
+    --primary-color: #5E5DF0;
+    --primary-color-dark: #4a4ad8;
+    --background-color: #F8F9FA;
+    --surface-color: #FFFFFF;
+    --text-color: #212529;
+    --secondary-text-color: #6C757D;
+    --border-color: #E9ECEF;
+    --border-radius: 8px;
+    --popup-width: 350px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    width: var(--popup-width);
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* =================================
+   Header
+   ================================= */
+.header {
+    background-color: var(--surface-color);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* =================================
+   Main Content & Forms
+   ================================= */
+.content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background-color: var(--surface-color);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(94, 93, 240, 0.15);
+}
+
+/* New rule for row layout */
+.row-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: transparent;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 7px;
+}
+
+
+/* =================================
+   Section Wrapper
+   ================================= */
+.section {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 16px;
+}
+
+/* =================================
+   Buttons
+   ================================= */
+.save-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 8px;
+}
+
+.save-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.save-button:active {
+    transform: scale(0.98);
+}
+
+/* =================================
+   Premium Section
+   ================================= */
+.premium-section {
+    background-color: #F0F0FF;
+    border: 1px solid #D9D9FF;
+    text-align: center;
+}
+
+.premium-banner h3 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+}
+
+.premium-banner p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+    margin: 0 0 16px 0;
+}
+
+.premium-button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--surface-color);
+    color: var(--primary-color);
+    border: 1px solid #D9D9FF;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.premium-button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+.premium-button:active {
+    transform: scale(0.98);
+}
+
+/* =================================
+   Active Timers List
+   ================================= */
+.active-timers h3 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+}
+
+.timer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.timer-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.timer-item strong {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.timer-item small {
+    font-size: 12px;
+    color: var(--secondary-text-color);
+}
+
+.delete-timer {
+    background: none;
+    border: none;
+    color: #E53E3E;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.delete-timer:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}

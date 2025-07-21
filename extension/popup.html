@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigDayTimer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="header">
+      <h1>⏳ BigDayTimer</h1>
+    </div>
+    
+    <div class="content">
+      <div class="form-group">
+        <label for="eventName">שם האירוע:</label>
+        <input type="text" id="eventName" placeholder="החתונה שלנו">
+      </div>
+      
+      <div class="row-group">
+        <div class="form-group">
+          <label for="eventDate">תאריך:</label>
+          <input type="date" id="eventDate" title="Event date">
+        </div>
+        <div class="form-group">
+          <label for="eventTime">שעה:</label>
+          <input type="time" id="eventTime" value="18:00" title="Event time">
+        </div>
+      </div>
+
+      <div class="row-group">
+        <div class="form-group">
+          <label for="textColor">צבע טקסט:</label>
+          <input type="color" id="textColor" value="#FFFFFF" title="Text color">
+        </div>
+        <div class="form-group">
+          <label for="backgroundColor">צבע רקע:</label>
+          <input type="color" id="backgroundColor" value="#667eea" title="Background color">
+        </div>
+      </div>
+      
+      <button id="saveTimer" class="save-button">שמור טיימר</button>
+      
+      <div class="active-timers section" id="timerListContainer">
+        <h3>טיימרים פעילים</h3>
+        <div id="timerList"></div>
+      </div>
+      
+      <div class="premium-section section" id="premiumBannerContainer">
+          <div class="premium-banner" id="premiumBanner">
+            <h3>✨ שדרג לפרימיום</h3>
+            <p>• מספר טיימרים במקביל<br>
+          • העלאת תמונות רקע<br>
+          • ועוד אפשרויות מתקדמות</p>
+            <button class="premium-button" id="upgradeToPremium">שדרוג - $4.99</button>
+          </div>
+      </div>
+      <div class="premium-settings-link-section section hidden" id="premiumSettingsLinkContainer">
+        <a href="#" id="openPremiumSettings">⭐ פתח הגדרות פרימיום</a>
+      </div>
+    </div>
+    
+    <script src="popup.js"></script>
+  </body>
+</html>

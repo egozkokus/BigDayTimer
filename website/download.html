@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download BigDayTimer - Free Chrome Extension</title>
+    <meta name="description" content="Download BigDayTimer Chrome extension - Beautiful floating countdown timers for your most important events. Free installation, premium features available.">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="nav-brand">
+                        <a href="/" class="brand-link">
+                            <span class="brand-icon">⏳</span>
+                            <span class="brand-text">BigDayTimer</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <a href="/#features" class="nav-link">
+                            <svg width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319z"/>
+                            </svg>
+                            Features
+                        </a>
+                        <a href="/#pricing" class="nav-link">
+                            <svg width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                                <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
+                            </svg>
+                            Pricing
+                        </a>
+                        <a href="user-guide.html" class="nav-link">
+                            <svg width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                            </svg>
+                            Guide
+                        </a>
+                        <a href="about.html" class="nav-link">
+                            <svg width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                            </svg>
+                            About
+                        </a>
+                        <a href="contact.html" class="nav-link">
+                            <svg width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                            </svg>
+                            Contact
+                        </a>
+                        <a href="download.html" class="nav-link nav-cta active">
+                            <svg width="16" height="16" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                            </svg>
+                            Download
+                        </a>
+                    </div>
+                    
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Download Hero Section -->
+    <section class="download-hero">
+        <div class="container">
+            <div class="download-hero-content">
+                <h1 class="hero-title">
+                    Download <span class="gradient-text">BigDayTimer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Start counting down to your most important moments with beautiful floating timers
+                </p>
+                
+                <div class="download-status">
+                    <div class="status-badge developing">
+                        <svg width="20" height="20" fill="currentColor" class="status-icon" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <span>Currently in Development</span>
+                    </div>
+                    <p class="status-description">
+                        BigDayTimer is being actively developed and will be available in the Chrome Web Store soon!
+                    </p>
+                </div>
+
+                <div class="download-actions">
+                    <button class="btn btn-primary btn-large" id="notifyMeBtn">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                        </svg>
+                        <span>Notify Me When Available</span>
+                    </button>
+                    <a href="user-guide.html" class="btn btn-secondary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                        </svg>
+                        <span>View User Guide</span>
+                    </a>
+                </div>
+
+                <div class="download-stats">
+                    <div class="stat">
+                        <div class="stat-number">1,500+</div>
+                        <div class="stat-label">Pre-registrations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">Q1 2025</div>
+                        <div class="stat-label">Expected Launch</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free to Try</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Requirements -->
+    <section class="system-requirements">
+        <div class="container">
+            <h2 class="section-title">
+                <svg width="32" height="32" fill="currentColor" class="section-icon" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 0.75rem;">
+                    <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v9A1.5 1.5 0 0 1 14.5 12h-13a1.5 1.5 0 0 1-1.5-1.5v-9zM1.5 1a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                    <path d="M3 13.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM1.5 14h13l-.086.5H1.586L1.5 14z"/>
+                </svg>
+                System Requirements
+            </h2>
+            <div class="requirements-grid">
+                <div class="requirement-card supported">
+                    <div class="requirement-icon">
+                        <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.061L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                        </svg>
+                    </div>
+                    <h3>Supported</h3>
+                    <ul>
+                        <li><strong>Google Chrome</strong> (Version 90+)</li>
+                        <li><strong>Microsoft Edge</strong> (Chromium-based)</li>
+                        <li><strong>Brave Browser</strong></li>
+                        <li><strong>Opera</strong> (Version 76+)</li>
+                        <li><strong>Windows</strong> 10/11</li>
+                        <li><strong>macOS</strong> 10.14+</li>
+                        <li><strong>Linux</strong> (Ubuntu, etc.)</li>
+                        <li><strong>Chrome OS</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card planned">
+                    <div class="requirement-icon">
+                        <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Coming Soon</h3>
+                    <ul>
+                        <li><strong>Firefox</strong> (Q2 2025)</li>
+                        <li><strong>Safari</strong> (Q3 2025)</li>
+                        <li><strong>Mobile Apps</strong> (Q4 2025)</li>
+                        <li><strong>Desktop Apps</strong> (2026)</li>
+                    </ul>
+                </div>
+                
+                <div class="requirement-card minimum">
+                    <div class="requirement-icon">
+                        <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
+                            <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319z"/>
+                        </svg>
+                    </div>
+                    <h3>Minimum Specs</h3>
+                    <ul>
+                        <li><strong>RAM:</strong> 4GB recommended</li>
+                        <li><strong>Storage:</strong> 50MB free space</li>
+                        <li><strong>Internet:</strong> Required for setup</li>
+                        <li><strong>Screen:</strong> 1024x768 minimum</li>
+                        <li><strong>Processor:</strong> Any modern CPU</li>
+                        <li><strong>Graphics:</strong> Hardware acceleration helpful</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Preview -->
+    <section class="installation-preview">
+        <div class="container">
+            <h2 class="section-title">
+                <svg width="32" height="32" fill="currentColor" class="section-icon" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 0.75rem;">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                </svg>
+                How Installation Will Work
+            </h2>
+            <div class="installation-steps">
+                <div class="install-step">
+                    <div class="step-visual">
+                        <div class="browser-mockup">
+                            <div class="browser-bar">
+                                <div class="browser-buttons">
+                                    <span class="btn-close"></span>
+                                    <span class="btn-minimize"></span>
+                                    <span class="btn-maximize"></span>
+                                </div>
+                                <div class="address-bar">chrome://extensions</div>
+                            </div>
+                            <div class="browser-content">
+                                <div class="store-icon">
+                                    <svg width="48" height="48" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                    </svg>
+                                </div>
+                                <p>Chrome Web Store</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Step 1: Visit Chrome Web Store</h3>
+                        <p>Open Google Chrome and navigate to the Chrome Web Store. Search for "BigDayTimer" or use our direct link.</p>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <div class="step-visual">
+                        <div class="extension-card">
+                            <div class="extension-icon">⏳</div>
+                            <div class="extension-info">
+                                <h4>BigDayTimer</h4>
+                                <div class="extension-rating">⭐⭐⭐⭐⭐</div>
+                                <button class="add-button">Add to Chrome</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Step 2: Install Extension</h3>
+                        <p>Click "Add to Chrome" and confirm the installation. The extension will be added to your browser automatically.</p>
+                    </div>
+                </div>
+
+                <div class="install-step">
+                    <div class="step-visual">
+                        <div class="timer-setup">
+                            <div class="setup-form">
+                                <input type="text" placeholder="Wedding Day 💍" readonly>
+                                <input type="date" readonly>
+                                <div class="background-preview"></div>
+                                <button class="save-button">Save Timer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Step 3: Set Up Your Timer</h3>
+                        <p>Click the BigDayTimer icon, enter your event details, choose a background, and start your countdown!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access -->
+    <section class="early-access">
+        <div class="container">
+            <div class="early-access-content">
+                <h2>🎯 Join the Beta Program</h2>
+                <p>Want to try BigDayTimer before the official release? Join our beta testing program and get exclusive early access!</p>
+                
+                <div class="beta-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <h4>Early Access</h4>
+                        <p>Try new features weeks before public release</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <h4>Beta Discount</h4>
+                        <p>50% off premium features for beta testers</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <h4>Shape Development</h4>
+                        <p>Your feedback directly influences our roadmap</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👑</div>
+                        <h4>VIP Support</h4>
+                        <p>Direct line to our development team</p>
+                    </div>
+                </div>
+
+                <div class="beta-signup">
+                    <h3>Request Beta Access</h3>
+                    <form class="beta-form" id="betaForm">
+                        <div class="form-row">
+                            <input type="email" placeholder="Your email address" required id="betaEmail">
+                            <button type="submit" class="btn btn-primary">Join Beta</button>
+                        </div>
+                        <p class="beta-note">Limited spots available. Beta testing starts February 2025.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Progress -->
+    <section class="development-progress">
+        <div class="container">
+            <h2 class="section-title">🚀 Development Progress</h2>
+            <div class="progress-timeline">
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">✅</div>
+                    <div class="timeline-content">
+                        <h4>Core Extension Development</h4>
+                        <p>Basic timer functionality and UI components</p>
+                        <span class="timeline-date">Completed December 2024</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item completed">
+                    <div class="timeline-marker">✅</div>
+                    <div class="timeline-content">
+                        <h4>Premium Features</h4>
+                        <p>Multiple timers, custom images, advanced settings</p>
+                        <span class="timeline-date">Completed January 2025</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item in-progress">
+                    <div class="timeline-marker">⏳</div>
+                    <div class="timeline-content">
+                        <h4>Testing & Polish</h4>
+                        <p>Bug fixes, performance optimization, UX improvements</p>
+                        <span class="timeline-date">In Progress - January 2025</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item upcoming">
+                    <div class="timeline-marker">📅</div>
+                    <div class="timeline-content">
+                        <h4>Beta Testing Program</h4>
+                        <p>Limited beta release to gather feedback</p>
+                        <span class="timeline-date">February 2025</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item upcoming">
+                    <div class="timeline-marker">🎉</div>
+                    <div class="timeline-content">
+                        <h4>Public Launch</h4>
+                        <p>Official release on Chrome Web Store</p>
+                        <span class="timeline-date">March 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="download-faq">
+        <div class="container">
+            <h2 class="section-title">❓ Download FAQ</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">When will BigDayTimer be available?</div>
+                    <div class="faq-answer">We're targeting a March 2025 launch on the Chrome Web Store. Beta testing will begin in February 2025 for early access users.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Will it be free to use?</div>
+                    <div class="faq-answer">Yes! BigDayTimer offers a robust free version with all core features. Premium features are available for $4.99 (one-time purchase).</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Which browsers are supported?</div>
+                    <div class="faq-answer">Initially Chrome and Chromium-based browsers (Edge, Brave, Opera). Firefox and Safari support are planned for later in 2025.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How do I get notified of the release?</div>
+                    <div class="faq-answer">Click "Notify Me When Available" above to join our notification list. We'll email you as soon as BigDayTimer launches.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is my data safe?</div>
+                    <div class="faq-answer">Absolutely. Your timer data is stored locally on your device. We only use minimal cloud storage for premium license verification.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I use it offline?</div>
+                    <div class="faq-answer">Yes! Once installed, BigDayTimer works completely offline. Internet is only needed for installation and premium feature verification.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="download-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Countdown?</h2>
+                <p>Join thousands of people eagerly waiting for BigDayTimer</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" id="notifyMeBtn2">
+                        <span>🔔 Get Launch Notification</span>
+                    </button>
+                    <a href="about.html" class="btn btn-outline">
+                        <span>Learn More About Us</span>
+                    </a>
+                </div>
+                <div class="social-proof">
+                    <p>💌 <strong>1,500+ people</strong> already signed up for launch notifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>BigDayTimer</h3>
+                    <p>Turn every browser opening into an exciting reminder of your next big thing</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h5>Product</h5>
+                        <a href="/#features">Features</a>
+                        <a href="/#pricing">Pricing</a>
+                        <a href="download.html">Download</a>
+                    </div>
+                    <div class="footer-column">
+                        <h5>Support</h5>
+                        <a href="/#faq">FAQ</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="user-guide.html">User Guide</a>
+                    </div>
+                    <div class="footer-column">
+                        <h5>Company</h5>
+                        <a href="about.html">About</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BigDayTimer. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Download page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Notification signup handlers
+            const notifyButtons = document.querySelectorAll('#notifyMeBtn, #notifyMeBtn2');
+            notifyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const email = prompt('Enter your email to get notified when BigDayTimer launches:');
+                    if (email && isValidEmail(email)) {
+                        // Here you would typically send to your backend
+                        console.log('Notification signup:', email);
+                        alert('🎉 Thanks! We\\'ll notify you as soon as BigDayTimer is available.');
+                    } else if (email) {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+            });
+            
+            // Beta form handler
+            const betaForm = document.getElementById('betaForm');
+            if (betaForm) {
+                betaForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('betaEmail').value;
+                    
+                    if (email && isValidEmail(email)) {
+                        // Here you would typically send to your backend
+                        console.log('Beta signup:', email);
+                        alert('🎯 Thanks for signing up for the beta! We\\'ll contact you when spots open up.');
+                        betaForm.reset();
+                    }
+                });
+            }
+            
+            // FAQ accordion functionality
+            const faqItems = document.querySelectorAll('.download-faq .faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                if (question && answer) {
+                    // Initially hide answers
+                    answer.style.maxHeight = '0';
+                    answer.style.overflow = 'hidden';
+                    answer.style.transition = 'max-height 0.3s ease';
+                    
+                    question.style.cursor = 'pointer';
+                    question.style.userSelect = 'none';
+                    
+                    // Add click handler
+                    question.addEventListener('click', () => {
+                        const isOpen = answer.style.maxHeight !== '0px';
+                        
+                        if (isOpen) {
+                            answer.style.maxHeight = '0';
+                            question.style.color = '#333';
+                        } else {
+                            answer.style.maxHeight = answer.scrollHeight + 'px';
+                            question.style.color = '#667eea';
+                        }
+                    });
+                }
+            });
+        });
+        
+        function isValidEmail(email) {
+            return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+        }
+    </script>
+</body>
+</html>

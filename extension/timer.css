@@ -1,0 +1,252 @@
+#bigdaytimerOverlay {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2147483647;
+  min-width: 320px;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: move;
+  -webkit-user-select: none;
+  user-select: none;
+  direction: rtl;
+}
+
+#bigdaytimerOverlay.dragging {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+#bigdaytimerOverlay.hidden {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#bigdaytimerOverlay .timer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#bigdaytimerOverlay .timer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+#bigdaytimerOverlay .timer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#bigdaytimerOverlay .timer-display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+#bigdaytimerOverlay .timer-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bigdaytimerOverlay .timer-number {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 5px;
+}
+
+#bigdaytimerOverlay .timer-label {
+  font-size: 12px;
+  opacity: 0.9;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+#bigdaytimerOverlay .timer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+#bigdaytimerOverlay .timer-toggle {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+
+#bigdaytimerOverlay .timer-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+#bigdaytimerOverlay .multiple-timers {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#bigdaytimerOverlay .timer-selector {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#bigdaytimerOverlay .timer-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#bigdaytimerOverlay .timer-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+#bigdaytimerOverlay .timer-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bigdaytimerOverlay .timer-nav-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+#bigdaytimerOverlay .timer-nav-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#bigdaytimerOverlay .timer-nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+#bigdaytimerOverlay .timer-expired {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#bigdaytimerOverlay .timer-expired .timer-number {
+  font-size: 20px;
+}
+
+#bigdaytimerOverlay .timer-expired .timer-display {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  #bigdaytimerOverlay {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 15px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  #bigdaytimerOverlay .timer-number {
+    font-size: 20px;
+  }
+  
+  #bigdaytimerOverlay .timer-display {
+    gap: 10px;
+  }
+}
+
+/* Animation for timer updates */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+#bigdaytimerOverlay .timer-number.updating {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Minimize button styles */
+#bigdaytimerOverlay .minimize-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+#bigdaytimerOverlay .minimize-button:hover {
+  opacity: 1;
+}
+
+/* Minimized state */
+#bigdaytimerOverlay.minimized {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#bigdaytimerOverlay.minimized .timer-content {
+  display: none;
+}
+
+#bigdaytimerOverlay.minimized::after {
+  content: "⏳";
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
